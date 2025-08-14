@@ -1,6 +1,7 @@
-import { Text, View, StyleSheet, Image,  ImageBackground,} from "react-native";
-import {Input} from '../components/input/Input'
-import {Botao} from '../components/botao/Botao'
+import { Text, View, StyleSheet, Image,  ImageBackground, ScrollView,} from "react-native";
+import { Input } from '../components/input/Input'
+import { Botao } from '../components/botao/Botao'
+import { Card } from '../components/card/Card'
 export default function Index() {
   return (
 <>
@@ -10,6 +11,10 @@ export default function Index() {
         <Image source={require('../assets/images/LogoFindCEP.png')} style={styles.logo}></Image>
 
       </ImageBackground>
+
+    <ScrollView style={styles.containerScroll}>
+
+
 
       {/* 2. Campo de consulta */}
       <View style={styles.container}>
@@ -23,7 +28,12 @@ export default function Index() {
       <Botao tituloBotao='Consultar'/>
       {/* 2.3. Botão */}
 
+    <Card/>
+
       </View>
+    </ScrollView>
+
+
 </>
   );
 }
@@ -42,16 +52,20 @@ const styles = StyleSheet.create({
   height : 120
  },
  container: {
- flex: 1.5,
  alignItems: 'center',
-paddingTop: 50,
-paddingBottom: 50,
-gap: 40
+gap: 40,
+width: '100%',
+minHeight: '100%',
  },
  titulo: {
  fontSize: 25,
- fontFamily: 'Poppins-SemiBold',
- color:'#000000'
+ fontFamily: 'Poppins-Bold'
 
+ },
+ containerScroll: {
+  flex: 1.5,
+  paddingTop: 50,
+  paddingBottom: 200,
  }
+ 
 })

@@ -21,9 +21,12 @@ const styles = StyleSheet.create({
    Input: {
     borderBottomWidth: 1,
     borderBottomColor: '#939393',
-    color: '#939393',
+    color: '#060606ff',
     padding: '5px',
     outlineStyle: 'none'
 
+   },
+   label: {
+      fontFamily: 'Poppins-Bold'
    }
 })
